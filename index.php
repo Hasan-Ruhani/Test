@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
     $students = [
         [
         'name' => 'Hasan',
@@ -26,3 +27,6 @@
         displayStudent($student);
         // echo $student['name']."-".$student['age']."\n";
     }
+=======
+    echo "hello";
+>>>>>>> 91d289f2f022deb93af582b57bf522455bcc2b92
