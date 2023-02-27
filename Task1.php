@@ -7,6 +7,13 @@
 		$abc->setName($_POST["name"]);
 		$abc->setEmail($_POST["email"]);
 	}
+
+	else{
+		$abc = new MyPerson();
+
+		$abc->setName("!..............!");
+		$abc->setEmail("!..............!");
+	}
 	
 ?>
 
@@ -21,8 +28,7 @@
     </head>
     <style>
 		body{
-			background-image: url('img_girl.jpg');
-
+			background-color: #615d8329;
 		}
 		.col {
 			-ms-flex-preferred-size: 0;
@@ -30,11 +36,11 @@
 			-ms-flex-positive: 1;
 			flex-grow: 1;
 			max-width: 100%;
-			border: solid bisque;
-			padding-bottom: 200px;
+			border: rgb(67 137 50 / 11%);
+			padding-bottom: 100px;
 			margin: 45px 7px;
 			padding-top: 30px;
-			background: bisque;
+			background: rgb(67 137 50 / 11%);
 			border-radius: 10px;
 		}
 		h1 {
@@ -54,43 +60,45 @@
 								<div class="input-group-prepend">
 									<label for="name" class="input-group-text">Name:</label><br>
 								</div>
-								<input type="text" id="name" name="name" placeholder="Name" required><br>
+								<input class="form-control" type="text" id="name" name="name" placeholder="Name" required><br>
 							</div>
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<label for="email" class="input-group-text">Email:</label><br>
 							</div>
-							<input type="email" id="email" name="email" class="form-control" placeholder="E-mail">
+							<input class="form-control" type="email" id="email" name="email" placeholder="E-mail" required>
 						</div>
-						<div class="form-group" text="center">
-							<input type="submit" value="Submit" class="btn float-right login_btn">
+						<div class="btn float-right login_btn">
+							<input type="submit" value="Submit" class="btn btn-outline-dark">
 						</div>
 					</form>
 				</div>
 				<div class="col">
 					<h1>Task-02</h1>
-					<p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium totam distinctio 
-						consequatur ad quis corporis at aliquam natus commodi aliquid deleniti tempore dicta harum, 
-						illum quibusdam, quidem, aperiam reiciendis provident.
+					<p> 
+						Here a basic php class is created with oop which is called by Person. And the properties and 
+						methods that are asked to follow all the properties are followed.
+						The output of this project has been displayed bellow.
 					</p>
-
-					<?php
-						echo "Name: " . $person->getName() . "<br>";
-						echo "Email: " . $person->getEmail() . "<br>";
-					?>
+					<h6>
+						<?php
+							echo "Name: " . $person->getName() . "<br>";
+							echo "Email: " . $person->getEmail() . "<br>";
+						?>
+					</h6>
 				</div>
 				<div class="col">
 					<h1>Task-03</h1>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium totam distinctio 
-						consequatur ad quis corporis at aliquam natus commodi aliquid deleniti tempore dicta harum, 
-						illum quibusdam, quidem, aperiam reiciendis provident.
+						Here a php script is created which displays below data received from Task-01.
+						Here all the conditions mentioned in Task-03 are filled up.
 					</p>
-
-					<?php
-						echo "Name: " . $abc->getName() . "<br>";
-						echo "Email: " . $abc->getEmail() . "<br>";
-					?>
+					<h6>
+						<?php
+							echo "Name: " . $abc->getName() . "<br>";
+							echo "Email: " . $abc->getEmail() . "<br>";
+						?>
+					</h6>
 				</div>
 			</div>
 		</div>
