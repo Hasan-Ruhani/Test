@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -74,3 +75,7 @@
     </div>
   </body>
 </html>
+=======
+<?php 
+  echo "hello";
+>>>>>>> 61fbb2d9f1d98f89946b873d3e3493cfcc862544
