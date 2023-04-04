@@ -1,70 +1,76 @@
-<<<<<<< HEAD
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML Table</title>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">    
-    </head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Watch Example</title>
     <style>
-      table {
-        border-collapse: collapse;
-        border: 2px solid red;
-        margin: 20px;
+      .watch {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #f7f7f7;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
       }
-      th, td {
-        padding: 10px;
-        border: 2px solid violet;
+
+      .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+      }
+
+      .hour-hand,
+      .minute-hand,
+      .second-hand {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: bottom center;
+        background-color: black;
+      }
+
+      .hour-hand {
+        width: 6px;
+        height: 50px;
+        transform: translate(-3px, -25px) rotate(30deg);
+      }
+
+      .minute-hand {
+        width: 4px;
+        height: 75px;
+        transform: translate(-2px, -37.5px) rotate(45deg);
+      }
+
+      .second-hand {
+        width: 2px;
+        height: 100px;
+        transform: translate(-1px, -50px) rotate(60deg);
+        animation-name: rotate;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: translate(-1px, -50px) rotate(60deg);
+        }
+        to {
+          transform: translate(-1px, -50px) rotate(420deg);
+        }
       }
     </style>
   </head>
   <body>
-    <div class="col-md-6">
-        <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>25</td>
-        </tr>
-        <tr>
-            <td>Sarah</td>
-            <td>30</td>
-        </tr>
-        <tr>
-            <td>Mike</td>
-            <td>28</td>
-        </tr>
-        </table>
-    </div>
-    <br>
-<div class="col-md-6">
-    <form method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"> 
-    <br>
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age">
-    <br>
-      <button class="btn btn-outline-dark" type="submit">Submit</button>
-    </form>
-    </div>
-    <div class="col-md-4">
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $name = $_POST["name"];
-            $age = $_POST["age"];
-            echo "<table>";
-            echo "<tr><th>Name</th><th>Age</th></tr>";
-            echo "<tr><td>$name</td><td>$age</td></tr>";
-            echo "</table>";
-        }
-        ?>
+    <div class="watch">
+      <div class="circle"></div>
+      <div class="hour-hand"></div>
+      <div class="minute-hand"></div>
+      <div class="second-hand"></div>
     </div>
   </body>
 </html>
-=======
->>>>>>> 675b13678e6815a808bc93c0b7e89d1de7514dd9
