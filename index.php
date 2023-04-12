@@ -1,4 +1,11 @@
+<html>
+  <head>
 
-<?php
-  echo "hi";
+  </head>
 
+  <body>
+     <script>
+      document.write("Hello JavaScript")
+     </script>
+  </body>
+</html>
