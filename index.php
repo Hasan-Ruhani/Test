@@ -6,7 +6,7 @@
   <body>
     <?php echo "hi"; ?>
      <script>
-      document.write("Hello JavaScript")
+      document.write("Hello Hasan")
      </script>
   </body>
 </html>
