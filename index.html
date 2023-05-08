@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Ecoyva</title>
+  </head>
+
+  <body>
+    
+    <h1>Add Your Favorite Fruit</h1>
+
+    <ul id="myList">
+      <li>Mango</li>
+      <li>Bananas</li>
+    </ul>
+
+    <button onclick="addListItem()">Add Item</button>
+
+    <script>
+      function addListItem() {
+          const myList = document.getElementById("myList");
+          const newListItem = document.createElement("li");
+          const listItemText = document.createTextNode("Apples");
+          newListItem.appendChild(listItemText);
+          myList.appendChild(newListItem);
+      }
+      addListItem();
+
+    </script>
+  </body>
+</html>
